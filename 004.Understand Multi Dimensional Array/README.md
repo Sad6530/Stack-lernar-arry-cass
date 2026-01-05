@@ -26,7 +26,6 @@ favorite food
 Array এর ভিতরে Array
 দেখতে অনেকটা Table এর মতো
 চলো দেখি 👇
-```Copy code
 ```Js
 let crushMemory = [
   ["sadia", "sumaiya", "sabrina"],
@@ -36,7 +35,6 @@ let crushMemory = [
 ];
 ```
 2D Array কে Table আকারে কল্পনা করলে
-```Copy code
 ```sadik
 | Name    | Favorite Color | Birthday     | Favorite Food |
 | ------- | -------------- | ------------ | ------------- |
@@ -55,7 +53,6 @@ let crushMemory = [
 arrayName[rowIndex][columnIndex]
 ```
 চলো দেখি 👇
-```Copy code
 ```Js
 let crushMemory = [
   ["sadia", "sumaiya", "sabrina"],
@@ -84,7 +81,6 @@ Data দিয়ে Information বানানো
 এখন শুধু data রাখলেই হবে না ❌
 এই data ব্যবহার করে meaningful information বানাতে হবে।
 চলো দেখি 👇
-```Copy code
 ```Js
 let crushMemory = [
   ["sadia", "sumaiya", "sabrina"],
