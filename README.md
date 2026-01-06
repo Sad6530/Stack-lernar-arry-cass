@@ -1,0 +1,87 @@
+JavaScript Array Constructor vs Factory Pattern
+এই ডকুমেন্টে JavaScript-এ Array তৈরি করার দুইটা পদ্ধতি সহজ ভাষায় বুঝানো হয়েছে।
+1️⃣ Constructor Pattern
+👉 যখন new keyword ব্যবহার করে Array বানানো হয়, তখন তাকে বলে Constructor Pattern।
+Example 1
+```Js
+var arr1 = new Array(1, 2, 3);
+console.log(arr1);
+```
+Output:
+```Js
+[1, 2, 3]
+```
+📌 এখানে একাধিক ভ্যালু দেওয়া হয়েছে, তাই সবগুলোই Array-এর element হয়ে গেছে।
+Example 2
+```Js
+var arr2 = new Array(5);
+console.log(arr2, arr2.length);
+```
+Output:
+```Js
+[ <5 empty items> ] 5
+```
+📌 এখানে শুধু একটা সংখ্যা (5) দেওয়া হয়েছে
+👉 JavaScript এটাকে element না ধরে length হিসেবে ধরে
+🧠 মানে:
+Array-তে ৫টা জায়গা আছে
+কিন্তু কোনো ভ্যালু নাই (empty)
+Example 3
+```Js
+var arr3 = new Array(1, 2, 3, 4, 5);
+console.log(arr3, arr3.length);
+```
+Output:
+```Js
+[1, 2, 3, 4, 5] //5
+```
+📌 একাধিক ভ্যালু থাকলে → সব element
+📌 length = element সংখ্যা
+2️⃣ Factory Pattern
+👉 যখন new ছাড়া Array বানানো হয়, তখন তাকে বলে Factory Pattern।
+⚠️ মজার বিষয়:
+Constructor আর Factory—দুটার আচরণ একই।
+Example 4
+```Js
+var arr4 = Array(1, 2, 3);
+console.log(arr4);
+```
+Output:
+```Js
+[1, 2, 3]
+```
+Example 5
+```Js
+var arr5 = Array(5);
+console.log(arr5, arr5.length);
+```
+Output:
+```Js
+[ <5 empty items> ] //5
+```
+📌 এখানেও একটাই সংখ্যা → length হিসেবে ধরা হয়েছে।
+Example 6
+```Js
+var arr6 = Array(1, 2, 3, 4, 5);
+console.log(arr6, arr6.length);
+```
+Output:
+```Js
+[1, 2, 3, 4, 5] //5
+```
+🔥 Important Summary
+```
+Result
+Array(5)
+৫ length-এর empty array
+Array(1,2,3)
+[1, 2, 3]
+new Array(5)
+৫ length-এর empty array
+new Array(1,2)
+[1, 2]
+```
+✅ Best Practice (সবচেয়ে ভালো উপায়)
+```Js
+var arr = [1, 2, 3, 4];
+```
